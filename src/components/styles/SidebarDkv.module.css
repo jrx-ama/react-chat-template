@@ -1,0 +1,23 @@
+.sidebarContainer {
+  max-width: 320px; /* Set a maximum width for your columns e.g 300px */
+  width:100%;
+  padding: 10px;
+  background: green;
+}
+
+.list li{
+  display: flex;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.cs-conversation{
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar  img{
+  width: 50px;
+  height: 50px;
+}
