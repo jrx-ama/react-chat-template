@@ -1,4 +1,3 @@
-import 'react-chat-elements/dist/main.css';
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
