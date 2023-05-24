@@ -1,3 +1,5 @@
+import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+
 import { Route, Routes } from 'react-router-dom';
 
 import Home from './views/Home';

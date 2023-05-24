@@ -7,8 +7,6 @@ import {
 } from '@chatscope/chat-ui-kit-react';
 import { faker } from '@faker-js/faker';
 
-import styles from './styles/SidebarDkv.module.css';
-
 type Status = 'Avalaible' | 'Eager' | 'Away' | 'Dnd' | 'Invisible' | 'Unavailable';
 
 interface Avatar {
@@ -31,7 +29,7 @@ function generateRandomConversations(number: number) {
     const conversation = {
       name: faker.person.firstName(),
       lastSenderName: faker.person.firstName(),
-      info: faker.lorem.slug({ min: 3, max: 6 }),
+      info: faker.lorem.sentence({ min: 3, max: 6 }),
       avatar: {
         src: 'https://cdn-icons-png.flaticon.com/512/1430/1430896.png',
         name: faker.person.firstName(),
@@ -54,18 +52,18 @@ const conversations = generateRandomConversations(8);
 
 const SidebarDkv = () => {
   return (
-    <Sidebar position="left" className={styles.sidebarContainer}>
+    <Sidebar position="left" style={{ backgroundColor: '#0b4c46' }}>
       <Search placeholder="Search..." />
-      <ConversationList className={styles.list}>
+      <ConversationList>
         {conversations.map((conver) => (
           <Conversation
             key={conver.name}
             name={conver.name}
             lastSenderName={conver.lastSenderName}
             info={conver.info}
+            style={{ backgroundColor: '#0b4c46', color: 'white' }}
           >
             <Avatar
-              className={styles.avatar}
               src={conver.avatar.src}
               name={conver.name}
               status={conver.avatar.status}

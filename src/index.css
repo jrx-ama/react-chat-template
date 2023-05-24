@@ -1,5 +1,3 @@
-@import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
-
 body {
   margin: 0;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -9,4 +7,12 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+section.bkg-gray > div.cs-message__content-wrapper > div.cs-message__content {
+  background-color: '#ccc';
+}
+
+section.bkg-green > div.cs-message__content-wrapper > div.cs-message__content {
+  background-color: '#0b4c46';
 }
