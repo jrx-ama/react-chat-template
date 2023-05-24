@@ -2,22 +2,32 @@
   max-width: 320px; /* Set a maximum width for your columns e.g 300px */
   width:100%;
   padding: 10px;
-  background: green;
+  background-color: #0b4c46;
 }
 
-.list li{
-  display: flex;
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+.search {
+  background-color: white;
+  border: 2px solid rgba(0,0,0, 0.17);
 }
 
-.cs-conversation{
-  display: flex;
-  flex-direction: column;
+.search input {
+  background-color: transparent;
 }
 
-.avatar  img{
-  width: 50px;
-  height: 50px;
+.search svg[data-icon='search'] {
+  color:#0b4c46;
+}
+
+.list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bkgTransparent {
+  background-color: transparent;
+  border-bottom: 1px solid  rgba(255, 255, 255, 0.23);
+}
+
+.bkgTransparent div.cs-conversation__name {
+  color: white;
 }

@@ -1,0 +1,24 @@
+
+
+.bkgGray {
+  background-color: #ccc;
+}
+
+.bkgGreen .cs-message--outgoing .cs-message__content {
+  background-color: red;
+}
+
+.msgInput{
+  margin-left:10px;
+}
+
+.msgInput{
+  background-color: white;
+  border: 2px solid rgba(0,0,0, 0.17);
+  border-radius: 25px;
+  margin-right: 0!important;
+}
+
+.msgInput div div {
+  background-color: white;
+}

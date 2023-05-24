@@ -15,7 +15,7 @@ const Home = () => {
         borderRadius: '2px',
       }}
     >
-      <MainContainer responsive style={{display:'flex'}}>
+      <MainContainer responsive>
         <SidebarDkv />
         <ChatContainerDkv />
       </MainContainer>

@@ -7,12 +7,15 @@ import {
 } from '@chatscope/chat-ui-kit-react';
 import { faker } from '@faker-js/faker';
 
-type Status = 'Avalaible' | 'Eager' | 'Away' | 'Dnd' | 'Invisible' | 'Unavailable';
+import styles from './styles/SidebarDkv.module.css';
+
+type Status = 'avalaible' | 'eager' | 'away' | 'dnd' | 'invisible' | 'unavailable';
 
 interface Avatar {
   src: string;
   name: string;
   status: Status;
+  unreadCnt?: number;
 }
 
 interface Conversation {
@@ -30,16 +33,17 @@ function generateRandomConversations(number: number) {
       name: faker.person.firstName(),
       lastSenderName: faker.person.firstName(),
       info: faker.lorem.sentence({ min: 3, max: 6 }),
+      unreadCnt: Math.floor(Math.random() * 260),
       avatar: {
         src: 'https://cdn-icons-png.flaticon.com/512/1430/1430896.png',
         name: faker.person.firstName(),
         status: faker.helpers.arrayElement([
-          'Available',
-          'Eager',
-          'Away',
-          'Dnd',
-          'Invisible',
-          'Unavailable',
+          'available',
+          'eager',
+          'away',
+          'dnd',
+          'invisible',
+          'unavailable',
         ]),
       },
     };
@@ -52,16 +56,17 @@ const conversations = generateRandomConversations(8);
 
 const SidebarDkv = () => {
   return (
-    <Sidebar position="left" style={{ backgroundColor: '#0b4c46' }}>
-      <Search placeholder="Search..." />
-      <ConversationList>
+    <Sidebar position="left" className={styles.sidebarContainer}>
+      <Search placeholder="Search..." className={styles.search} />
+      <ConversationList className={styles.list}>
         {conversations.map((conver) => (
           <Conversation
             key={conver.name}
             name={conver.name}
             lastSenderName={conver.lastSenderName}
             info={conver.info}
-            style={{ backgroundColor: '#0b4c46', color: 'white' }}
+            className={`conversation-left ${styles.bkgTransparent}`}
+            unreadCnt={conver.unreadCnt}
           >
             <Avatar
               src={conver.avatar.src}

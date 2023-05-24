@@ -9,10 +9,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-section.bkg-gray > div.cs-message__content-wrapper > div.cs-message__content {
-  background-color: '#ccc';
-}
-
-section.bkg-green > div.cs-message__content-wrapper > div.cs-message__content {
-  background-color: '#0b4c46';
-}
