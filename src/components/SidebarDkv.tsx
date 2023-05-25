@@ -8,6 +8,7 @@ import {
 import { faker } from '@faker-js/faker';
 
 import styles from './styles/SidebarDkv.module.css';
+import { Box, Switch, Typography } from '@mui/material';
 
 type Status = 'avalaible' | 'eager' | 'away' | 'dnd' | 'invisible' | 'unavailable';
 
@@ -58,6 +59,13 @@ const SidebarDkv = () => {
   return (
     <Sidebar position="left" className={styles.sidebarContainer}>
       <Search placeholder="Search..." className={styles.search} />
+      <Box
+        container
+        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+      >
+        <Typography color="white">Casos</Typography>
+        <Switch defaultChecked />
+      </Box>
       <ConversationList className={styles.list}>
         {conversations.map((conver) => (
           <Conversation
